@@ -2,7 +2,8 @@ services:
   - type: web
     name: dearme-fulltext-collector
     runtime: docker
-    dockerfilePath: ./Dockerfile
+    dockerfilePath: ./collector_server/Dockerfile
+    dockerContext: ./collector_server
     healthCheckPath: /health
     autoDeploy: true
     envVars:
